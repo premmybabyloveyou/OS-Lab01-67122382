@@ -1,16 +1,19 @@
 ======================================================
 COE67-XXX Operating Systems - Lab 01 Report
-Name: 
-Student ID: 
+Name: Takdanai Niyomsap
+Student ID: 67122382
 ======================================================
 
 1. Hardware Baseline:
-- OS Version:
-- Number of CPU Cores:
-- Total RAM:
+- OS Version:Linux 6.8.0-1052-azure
+- Number of CPU Cores: 2
+- Total RAM: 7.76 GB
 
 2. Observation (from htop during stress test):
-[Write your answer here]
+[During the CPU stress test in Phase 4, the Python script utilized only one CPU core. In htop,
+ I observed that one CPU core was close to 100% usage, while the other CPU cores had much lower usage. 
+ This indicates that the Python script mainly used a single CPU core rather than fully utilizing all available CPU cores.]
 
 3. Analysis:
-[Write your answer here]
+[It is important to know the RAM and CPU cores before training a Machine Learning model. A dataset of 500,000 images can use a lot of memory. 
+Knowing the hardware limits helps us use batches, improve processing speed, and prevent out-of-memory errors.]
