@@ -1,0 +1,19 @@
+======================================================
+COE67-222 Operating Systems - Lab 03 Report
+Name: Takdanai Niyomsap
+Student ID: 67122382
+======================================================
+
+1. The Race Condition (Phase 2):
+The final weight is less than expected because multiple threads update the same variable at the same time. The OS Scheduler switches between threads, causing some updates to be overwritten or lost.
+
+2. Mutex vs. Semaphore (Phase 3):
+The mutex allows only one thread to access the shared buffer at a time.
+
+The empty semaphore counts the available empty spaces, while the full semaphore counts the available items in the buffer.
+
+A Mutex alone is not enough because it only controls access, but does not track the number of empty spaces or available items.
+
+
+3. Deadlock Awareness:
+If mutex.acquire() is called first and the buffer is full, the Producer will hold the mutex and wait for an empty space. The Consumer also needs the mutex to remove an item, so it cannot proceed. Both processes will wait forever, causing a deadlock.
