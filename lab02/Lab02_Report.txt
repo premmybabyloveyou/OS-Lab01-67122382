@@ -1,0 +1,16 @@
+======================================================
+COE67-222 Operating Systems - Lab 02 Report
+Name: Takdanai Niyomsap
+Student ID: 67122382
+======================================================
+
+1. Execution Time Comparison:
+- Sequential Time: [15.48] seconds
+- Multithreading Time: [15.41] seconds
+- Multiprocessing Time: [8.47] seconds
+
+2. System Observation (htop):
+When running the Multithreading script, mainly one CPU core was heavily utilized because of Python's GIL. In contrast, the Multiprocessing script used multiple CPU cores at the same time, resulting in better CPU utilization and faster execution.
+
+3. Analysis (The GIL):
+Multithreading did not make the code faster because the GIL allows only one thread to execute Python bytecode at a time. Multiprocessing is better for CPU-bound tasks because each process has its own Python interpreter and GIL, allowing tasks to run in parallel on multiple CPU cores.
